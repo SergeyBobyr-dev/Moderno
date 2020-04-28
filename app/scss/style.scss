@@ -1323,12 +1323,6 @@ button.icon-unsorted{
     background-color: #d32f2f;
 }
 
-
-
-
-
-
-
 .product-one__more-title{
     font-size: 18px;
     @include f500;
@@ -1425,6 +1419,38 @@ button.icon-unsorted{
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
+    .jq-selectbox{
+        width: 100%;
+    }
+    .jq-selectbox__select {
+        width: 83px;
+        height: 25px;
+        font-size: 13px;
+        padding: 0px 11px;
+        border: 1px solid #d7d7d7;
+        border-bottom-color: #d7d7d7;
+        border-radius: 0px;
+        background: #f9f9f9;
+        box-shadow: none;
+        font-family: 'Roboto-bold', sans-serif;
+        color: #707070;
+        text-shadow: none;
+        line-height: 25px;
+    }
+    .jq-selectbox__trigger{
+        border-left: none;
+    }
+    .jq-selectbox__trigger-arrow {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        width: 0;
+        height: 0;
+        border-top: 5px solid $green;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+    }
+    
 }
 .price__product{
     font-size: 22px;
@@ -1826,6 +1852,25 @@ button.icon-unsorted{
         border: 1px solid #dedede;
         padding: 0px 10px;
     }
+    .jq-selectbox{
+        width: 540px;
+    }
+    .jq-selectbox__select {
+        height: 40px;
+        padding: 0px 18px;
+        border: 1px solid #d7d7d7;
+        border-bottom-color: #d7d7d7;
+        border-radius: 0px;
+        background: #f9f9f9;
+        box-shadow: none;
+        font-family: 'Roboto-Regular', sans-serif;
+        color: #707070;
+        text-shadow: none;
+        line-height: 40px;
+    }
+    .jq-selectbox__trigger{
+        border-left: none;
+    }
 }
 //end settings
 //start profile
@@ -2048,9 +2093,6 @@ button.icon-unsorted{
         span{
             color: $green;
         }
-        &::placeholder{
-            color: #707070;
-        }
     }
     select,
     input,
@@ -2061,6 +2103,9 @@ button.icon-unsorted{
         height: 40px;
         background-color: #f9f9f9;
         padding: 0px 18px;
+        &::placeholder{
+            color: #707070;
+        }
     }
     textarea{
         resize: none;
@@ -2138,5 +2183,118 @@ button.icon-unsorted{
 }   
 
 //end upload
+//start withdrawals
+.withdrawals__inner{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+}
+.withdrawals__col{
+    max-width: 570px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    height: 100%;
+    margin-right: 34px;
+}
+.withdrawals__title{
+    padding: 18px 32px 24px;
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 30px;
+    color: $bg;
+    @include f500;
+    font-size: 24px;
+}
+.withdrawals__content{
+    padding-left: 35px;
+    padding-right: 40px;
+    button{
+        margin-bottom: 50px;
+        color: #fff;
+        background-color: $green;
+        border: none;
+        padding: 15px 36px;
+        cursor: pointer;
+    }
+}
+.withdrawals__form-line{
+    margin-bottom: 25px;
+    label{
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        @include f500;
+        margin-bottom: 15px;
+        color: $bg;
+        span{
+            color: $green;
+        }
+    }
+    input,
+    select{
+        width: 100%;
+        display: block;
+        border: 1px solid #d7d7d7;
+        height: 40px;
+        background-color: #f9f9f9;
+        padding: 0px 18px;
+        &::placeholder{
+            color: #707070;
+        }
+    }
+    .jq-selectbox{
+        width: 100%;
+    }
+    .jq-selectbox__select {
+        height: 40px;
+        padding: 0px 18px;
+        border: 1px solid #d7d7d7;
+        border-bottom-color: #d7d7d7;
+        border-radius: 0px;
+        background: #f9f9f9;
+        box-shadow: none;
+        font-family: 'Roboto-Regular', sans-serif;
+        color: #707070;
+        text-shadow: none;
+        line-height: 40px;
+    }
+    .jq-selectbox__trigger{
+        border-left: none;
+    }
+}
+.withdrawals__content-items{
+    padding-bottom: 35px;
+}
+.withdrawals__content-item{
+    display: flex;
+    height: 42px;
+    align-items: center;
+    font-size: 13px;
+    color: #444;
+    &:nth-child(odd){
+        background-color: #f9f9f9;
+    }
+}
+.withdrawals__content-data{
+    width: 154px;
+    padding-left: 20px;
+    @include f500;
+}
+.withdrawals__content-email{
+    width: 180px;
+    @include f500;
+}
+.withdrawals__content-price{
+    width: 70px;
+    @include f700;
+}
+.withdrawals__content-status{
+    width: 88px;
+    @include f700;
+    &.withdrawals__content-paid{
+        color: $green;
+    }
+}
+//end withdrawals
 
 @import 'media';
